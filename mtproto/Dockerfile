@@ -1,6 +1,6 @@
 ARG GOLANG_IMAGE="golang:1.26.6-alpine"
-ARG TARGETARCH
-ARG BUILD_FROM
+ARG TARGETARCH="arm64"
+ARG BUILD_FROM="ghcr.io/home-assistant/aarch64-base:3.18"
 
 # === Этап 1: Сборка Go-приложения ===
 FROM ${GOLANG_IMAGE} AS builder
